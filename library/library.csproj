@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<PackageId>ceetemsoft.lua</PackageId>
+		<VersionPrefix>1.0.0</VersionPrefix>
+		<Authors>colton.murphy</Authors>
+		<Company>CeetemSoft</Company>
+		<NoPackageAnalysis>true</NoPackageAnalysis>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<AssemblyName>$(PackageId)</AssemblyName>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<TargetFramework>net11.0</TargetFramework>
+		<LangVersion>preview</LangVersion> 
+	</PropertyGroup>
+	
+	<ItemGroup>
+		<None
+			Include="assets/library.targets" Pack="true"
+			PackagePath="build/library.targets" />
+
+  		<None
+			Include="assets/runtimes/**/*" Pack="true"
+			PackagePath="runtimes/"/>
+	</ItemGroup>
+</Project>

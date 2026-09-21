@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<AssemblyName>test</AssemblyName>
+		<IsPackable>false</IsPackable>
+		<LangVersion>preview</LangVersion>
+		<TargetFramework>net11.0</TargetFramework>
+		<PublishAot>true</PublishAot>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!--<ProjectReference Include="..\library\library.csproj"/>-->
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="ceetemsoft.lua" Version="1.0.0-local"/>
+	</ItemGroup>
+</Project>
