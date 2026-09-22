@@ -5,14 +5,22 @@
 		<IsPackable>false</IsPackable>
 		<LangVersion>preview</LangVersion>
 		<TargetFramework>net11.0</TargetFramework>
-		<PublishAot>true</PublishAot>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<!--<ProjectReference Include="..\library\library.csproj"/>-->
+		<ProjectReference Include="..\library\library.csproj"/>
 	</ItemGroup>
 
-	<ItemGroup>
-		<PackageReference Include="ceetemsoft.lua" Version="1.0.0-local"/>
+	<ItemGroup Condition="'$(PublishAot)' == 'true'">
+		<DirectPinvoke Include="luajit"/>
+
+		<NativeLibrary
+			Include="$(LuaJitDir)luajit.lib"/>
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(PublishAot)' != 'true'">
+		<None
+			Include="$(LuaJitDir)luajit.dll"
+			CopyToOutputDirectory="PreserveNewest"/>
 	</ItemGroup>
 </Project>

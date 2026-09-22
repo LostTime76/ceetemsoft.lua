@@ -1,0 +1,9 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup Condition="'$(PublishAot)' == 'true'">
+		<DirectPInvoke Include="luajit"/>
+
+		<NativeLibrary
+			Condition="'$(RuntimeIdentifier)' == 'win-x64'"
+			Include="$(MSBuildThisFileDirectory)../$(LuaJitRuntimesDir)luajit.lib"/>
+	</ItemGroup>
+</Project>

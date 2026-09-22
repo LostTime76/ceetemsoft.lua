@@ -1,0 +1,6 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<LuaJitVersionNumber>21</LuaJitVersionNumber>
+		<LuaJitRuntimesDir>runtimes/win-x64/native/</LuaJitRuntimesDir>
+	</PropertyGroup>
+</Project>
